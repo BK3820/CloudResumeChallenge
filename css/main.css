@@ -1,0 +1,334 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-bg-color: #ffffff;
+  --primary-accent: #0c1618;
+  --secondary-accent: #6f1d1b;
+
+  --main-text-color: #0c1618;
+  --gray-text-color: #565a5b;
+
+  --white-color: #fff;
+  --gray-color: #ffffff;
+  --gray-color-2: #ffffff;
+  --gray-color-3: #ffffff;
+
+  --color-preloader-bg: var(--white-color);
+  --color-dots: #1a1a1a;
+}
+
+/* Common styles */
+html, body {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 100%; /* Ensure full height of viewport */
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  color: var(--main-text-color);
+  font-family: "Poppins", sans-serif;
+  display: flex; /* Flex layout for body */
+  flex-direction: column; /* Arrange elements vertically */
+  min-height: 100%; /* Ensure full height */
+}
+
+.container {
+  padding: 0 3.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.container-lg {
+  max-width: 160rem;
+}
+
+.title {
+  font-size: 4.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  height: 5.2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  line-height: 5.2rem;
+  padding: 0 3.6rem;
+  margin: 0 1.2rem 1.6rem 0;
+  color: var(--white-color);
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--primary-accent);
+  border: 2px solid var(--primary-accent);
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
+  color: var(--white-color);
+  outline: 0;
+}
+
+.btn:active {
+  background-color: #000000;
+}
+
+.btn-white {
+  background: transparent;
+  font-weight: 700;
+  border: 2px solid var(--primary-accent);
+  color: var(--primary-accent);
+  transition: all 0.3s ease-in;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+  background: var(--primary-accent);
+  border: 2px solid var(--primary-accent);
+  color: var(--white-color);
+}
+
+.btn-white:active {
+  background-color: #3c4446;
+}
+
+.btn-red {
+  background: var(--secondary-accent);
+  border: 2px solid var(--secondary-accent);
+  color: var(--white-color);
+  transition: all 0.3s ease-in;
+}
+
+.btn-red:hover,
+.btn-red:focus {
+  background: var(--primary-accent);
+  border: 2px solid var(--primary-accent);
+}
+
+.btn-red:active {
+  background-color: #3c4446;
+}
+
+h5 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 23px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.white {
+  color: var(--white-color);
+}
+
+/* Header */
+.header {
+  z-index: 100;
+  background-color: transparent;
+  height: 7.2rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2.5rem 0;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: 7.2rem;
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1999;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+  padding-top: 0;
+  padding-bottom: 0;
+  animation: slideInDown 0.3s ease-in-out;
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  position: relative;
+  padding: 0 1.2rem 0.3rem 0;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 3.2rem;
+  color: var(--main-text-color);
+}
+
+.logo span {
+  color: var(--secondary-accent);
+  font-size: 4rem;
+}
+
+/* Navigation bar sentence */
+.nav-sentence {
+  font-size: 2rem; /* Adjust text size */
+  color: var(--gray-text-color); /* Match existing color scheme */
+  margin-right: auto;/* Push the sentence to the right */
+  padding-left: 2rem; /* Add spacing from navigation links */
+  font-weight: 400;
+  text-transform: none; /* Optional: prevent uppercase transformation */
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 2.6rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.nav-btn {
+  display: none;
+}
+
+.nav-link {
+  color: var(--gray-text-color);
+}
+
+.nav-link.active {
+  color: var(--secondary-accent);
+  font-weight: 600;
+}
+
+
+/* Hero section */
+
+/* Hero section */
+.hero {
+  position: relative;
+  padding-top: 18rem; /* Adjust padding if needed */
+  padding-bottom: 18rem; /* Add bottom padding for centering */
+  background-color: var(--primary-bg-color);
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text alignment */
+}
+
+.hero-content {
+  padding: 2rem;
+}
+
+.hero-greeting {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: var(--secondary-accent);
+  margin-bottom: 1rem; /* Add spacing between elements */
+}
+
+.hero-heading {
+  margin: 0.5rem 0;
+  font-weight: 500;
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.hero-heading-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 1rem; /* Add spacing after heading */
+}
+
+
+.hero-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+.about-social-list {
+  display: flex;
+}
+
+.social-links-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  margin: 4rem 0 4rem;
+}
+
+.social-links-row a {
+  height: 2.4rem;
+  width: 2.4rem;
+  filter: invert(35%) sepia(11%) saturate(160%) hue-rotate(145deg)
+    brightness(88%) contrast(80%);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-links-row a:hover {
+  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(305deg)
+    brightness(97%) contrast(103%);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-accent);
+  color: var(--gray-color-3);
+  margin-top: auto; /* Push footer to the bottom */
+  width: 100%; /* Ensure it spans the entire width */
+}
+
+.footer-top-bar {
+  background-color: #000000; /* Black top bar */
+  height: 3rem; /* Height of the top black bar */
+  width: 100%;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2rem;
+  align-items: center;
+  padding: 0rem 0;
+}
+
+.footer-social {
+  margin-top: 1;
+  margin-bottom: 1;
+}
+
+.footer-social a:hover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
+}
+
+.footer-copyright {
+  font-size: 1.6rem;
+}
