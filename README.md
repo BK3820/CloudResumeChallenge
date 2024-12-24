@@ -67,6 +67,36 @@ This README follows the structure outlined in the [Cloud Resume Challenge Docume
 
 ## Architecture Diagram
 
-[Insert or link your architecture diagram here.]
+![Architecture Diagram](frontend/img/readmeimg/archi-diag.png)
+
+---
+
+## Project Deployment
+
+### Steps to Reproduce:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   ```
+2. **Deploy Static Website**:
+   - Upload HTML/CSS files to Azure Blob Storage.
+   - Configure static website hosting and CDN.
+3. **Set Up Function App**:
+   - Deploy the C# Azure Function App using Visual Studio or Azure CLI.
+4. **CI/CD Pipeline**:
+   - Configure GitHub Actions workflow for automated deployments.
+
+---
+
+## Technologies Used
+
+- **Azure Blob Storage**: Static website hosting.
+- **Azure CDN**: Content delivery network for faster load times.
+- **Azure Functions**: Backend serverless logic for page view tracking.
+- **Azure Cosmos DB**: Visitor data storage.
+- **GitHub Actions**: CI/CD pipeline for automated deployments.
+- **C#**: Programming language for the Azure Function App.
+
 
 
