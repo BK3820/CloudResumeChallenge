@@ -1,10 +1,16 @@
 # Cloud Resume Challenge
 
-This README follows the structure outlined in the [Cloud Resume Challenge Documentation](https://cloudresumechallenge.dev/docs/the-challenge/azure/).
+[Cloud Resume Challenge Documentation](https://cloudresumechallenge.dev/docs/the-challenge/azure/).
 
 ---
 
 ## The Challenge Breakdown
+
+## Architecture Diagram
+
+![Architecture Diagram](frontend/img/readmeimg/archi-diag.png)
+
+---
 
 ### 1. **Certification**
 
@@ -62,12 +68,6 @@ This README follows the structure outlined in the [Cloud Resume Challenge Docume
 
 - Wrote a blog post explaining the project setup, challenges faced, and learnings.
   - [Link to the blog post](#add-your-blog-link-here).
-
----
-
-## Architecture Diagram
-
-![Architecture Diagram](frontend/img/readmeimg/archi-diag.png)
 
 ---
 
